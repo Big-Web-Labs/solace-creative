@@ -1,0 +1,41 @@
+html {
+  background-color: blue;
+  scroll-behavior: smooth;
+}
+
+.shoe_background {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("assets/header.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    min-height: 600px;
+    max-height: 1000px;
+}
+
+.singer_background {
+  background-image: url("assets/singer.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.filmer_background {
+  background-image: url("assets/filmer.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.skater_background {
+  background-image: url("assets/skater.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.section {
+  max-width: 1536px;
+  padding: 2rem;
+  margin: 0 auto;
+}
