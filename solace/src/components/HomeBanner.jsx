@@ -1,19 +1,16 @@
 import React from 'react'
-import logo from '../assets/solace_logo.png'
-import downArrow from '../assets/down_arrow.png'
+import logo from '../assets/solace_spinning.mp4'
 import { Navbar } from './'
 import '../App.css'
 
 const HomeBanner = () => {
     return (
-        <div className="shoe_background section relative">
-            <div className="relative flex">
-                <img src={logo} alt="Solace logo" className="max-w-[50%]"/>
+        <div className="h-[100vh] max-h-[1000px] section">
+            <div className="relative">
                 <Navbar />
             </div>
-            <div className="absolute bottom-0 left-0 px-10 py-3 sm:py-6 flex justify-between w-full items-center">
-                <h1 className="text-white text-[1.125rem] sm:text-[2.25rem] lg:text-[3.78rem] font-light font-roboto">Nike: Virgil Abloh "CODES"</h1>
-                <a href="#data1"><img src={downArrow} alt="down arrow" className="cursor-pointer w-[50px] sm:w-auto"/></a>
+            <div className="w-full h-full flex justify-center items-center">
+                <video autoPlay loop muted className="object-cover w-[80vh] h-[80vh] max-w-[800px] max-h-[800px]"><source src={logo} type="video/mp4" /></video>
             </div>
         </div>
     )
