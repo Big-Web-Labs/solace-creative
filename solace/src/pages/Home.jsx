@@ -1,11 +1,17 @@
 import React from 'react'
-import {HomeBanner, Data1, Meaning, Footer} from '../components'
+import {HomeBanner, Carousel, Meaning, Footer, NavOverlay} from '../components'
+import { useSelector, useDispatch } from 'react-redux'
 
 const Home = () => {
+
+  const { open } = useSelector((state) => state.menu) 
+
+
   return (
-    <div>
+    <div className="bg-[#2323F2]">
+        {open && <NavOverlay/>}
         <HomeBanner />
-        <Data1 />
+        <Carousel />
         <Meaning />
         <div className="p-8"></div>
         <Footer />

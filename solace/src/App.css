@@ -1,5 +1,4 @@
 html {
-  background-color: blue;
   scroll-behavior: smooth;
 }
 
@@ -7,4 +6,5 @@ html {
   max-width: 1536px;
   padding: 2rem;
   margin: 0 auto;
+  overflow: hidden;
 }
