@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import {Home, Portfolio} from './pages'
+import {CreativeAgency, Home, ForTheLikeMinded, InternalProjects, Contact} from './pages'
 import './App.css'
 
 function App() {
@@ -9,9 +9,10 @@ function App() {
       <Routes>
         <Route path="/">
           <Route index element={<Home />} />
-          <Route path="portfolio" element={<Portfolio />} />
-          {/* <Route path="contact" element={<Contact />} />
-          <Route path="*" element={<NoPage />} /> */}
+          <Route path="creative-agency" element={<CreativeAgency />} />
+          <Route path="for-the-like-minded" element={<ForTheLikeMinded />} />
+          <Route path="internal-projects" element={<InternalProjects />} />
+          <Route path="contact" element={<Contact />} />
         </Route>
       </Routes>
     </BrowserRouter>

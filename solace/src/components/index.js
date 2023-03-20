@@ -3,5 +3,7 @@ export { default as Navbar } from './Navbar';
 export { default as Carousel } from './Carousel';
 export { default as Meaning } from './Meaning';
 export { default as Footer } from './Footer';
-export { default as PortfolioBanner } from './PortfolioBanner';
+export { default as CreativeBanner } from './CreativeBanner';
 export { default as NavOverlay } from './NavOverlay';
+export { default as CreativePortfolio } from './CreativePortfolio';
+export { default as SearchOverlay } from './SearchOverlay';
