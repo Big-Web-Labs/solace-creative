@@ -8,7 +8,7 @@ const CreativeBanner = ({logo}) => {
                 <Navbar />
             </div>
             <div className="w-full h-full flex justify-center items-center">
-                <a href="/"><img src={logo} alt="Solace Creative" /></a>
+                <a href="/"><img src={logo} alt="Solace Creative" className="w-20"/></a>
             </div>
         </div>
     )

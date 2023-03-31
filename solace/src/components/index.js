@@ -6,4 +6,4 @@ export { default as Footer } from './Footer';
 export { default as CreativeBanner } from './CreativeBanner';
 export { default as NavOverlay } from './NavOverlay';
 export { default as CreativePortfolio } from './CreativePortfolio';
-export { default as SearchOverlay } from './SearchOverlay';
+export { default as ContactForm } from './ContactForm';

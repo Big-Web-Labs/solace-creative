@@ -9,33 +9,6 @@ const Carousel = () => {
 
     const { open } = useSelector((state) => state.menu)
 
-    const moveLeft = () => {
-        const prevState = [...data]
-        const nextCardIdx = prevState.filter((ft) => ft.active === true).sort((a, b) => (a.pos > b.pos ? 1 : b.pos > a.pos ? -1 : 0))[0].idx
-        prevState.find((f) => f.active === false).active = true
-        prevState.find((f) => f.idx === nextCardIdx).active = false
-        prevState.find((f) => f.idx === nextCardIdx).pos = Math.max.apply(null, prevState.map(function (o) { return o.pos; })) + 1
-        setData(prevState)
-    }
-
-    const moveRight = () => {
-        const prevState = [...data];
-        const nextCardIdx = prevState
-            .filter((ft) => ft.active === true)
-            .sort((a, b) => (a.pos > b.pos ? 1 : b.pos > a.pos ? -1 : 0))
-            .pop(1).idx;
-        prevState.find((f) => f.active === false).pos =
-            Math.min.apply(
-                null,
-                prevState.map(function (o) {
-                    return o.pos;
-                })
-            ) - 1;
-        prevState.find((f) => f.active === false).active = true;
-        prevState.find((f) => f.idx === nextCardIdx).active = false;
-        setData(prevState);
-    }
-
     const [data, setData] = useState([
         {
             idx: 1,
@@ -87,24 +60,38 @@ const Carousel = () => {
         },
     ])
 
-    useEffect(() => {
-        setTimeout(() => {
-            moveLeft()
-        }, "4000");
-    }, [data])
-
     return (
-        <motion.div layout className="py-16 flex flex-col sm:flex-row justify-between gap-10 text-[#F3F3F3] section overflow-hidden scroll-smooth z-0">
-            {data.filter((f) => f.active === true)
-            .sort((a, b) => (a.pos > b.pos ? 1 : b.pos > a.pos ? -1 : 0)) 
-            .map((item) => (
-                <motion.div key={item.title} animate={{opacity: 1}} initial={{opacity: 0}} exit={{opacity: 0}} layout className="flex-[0_0_48%]">
-                    {!open && <img src={item.image} alt="crowd" />}
-                    {!open && <p className="text-[1.25rem] sm:text-[2rem] font-light font-roboto mt-10">{item.title}</p>}
-                    {!open && <p className="flex items-center gap-x-2 text-[0.875rem] font-medium font-roboto cursor-pointer">Read more <span><img src={rightArrow} /></span></p>}
-                </motion.div>
-            ))}
-        </motion.div>
+        // <motion.div layout className="py-16 flex flex-col sm:flex-row justify-between gap-10 text-[#F3F3F3] section overflow-hidden scroll-smooth z-0">
+        //     {data.filter((f) => f.active === true)
+        //     .sort((a, b) => (a.pos > b.pos ? 1 : b.pos > a.pos ? -1 : 0)) 
+        //     .map((item) => (
+        //         <motion.div key={item.title} animate={{opacity: 1}} initial={{opacity: 0}} exit={{opacity: 0}} layout className="flex-[0_0_48%]">
+        //             {!open && <img src={item.image} alt="crowd" />}
+        //             {!open && <p className="text-[1.25rem] sm:text-[2rem] font-light font-roboto mt-10">{item.title}</p>}
+        //             {!open && <p className="flex items-center gap-x-2 text-[0.875rem] font-medium font-roboto cursor-pointer">Read more <span><img src={rightArrow} /></span></p>}
+        //         </motion.div>
+        //     ))}
+        // </motion.div>
+        <div className="section grid place-items-center">
+            <div className="slider">
+                <div className="slide-track">
+                    {data.map((item, index) => (
+                        <div className="slide text-[#F3F3F3] cursor-pointer" key={index}>
+                            <img src={item.image} />
+                            <p className="text-[1.25rem] sm:text-[2rem] font-light font-roboto mt-5 sm:mt-10">{item.title}</p>
+                            <p className="flex items-center gap-x-2 text-[0.875rem] font-medium font-roboto cursor-pointer">Read more <span><img src={rightArrow} /></span></p>
+                        </div>
+                    ))}
+                    {data.map((item, index) => (
+                        <div className="slide text-[#F3F3F3] cursor-pointer" key={index}>
+                            <img src={item.image} />
+                            <p className="text-[1.25rem] sm:text-[2rem] font-light font-roboto mt-5 sm:mt-10">{item.title}</p>
+                            <p className="flex items-center gap-x-2 text-[0.875rem] font-medium font-roboto cursor-pointer">Read more <span><img src={rightArrow} /></span></p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </div>
     )
 }
 
