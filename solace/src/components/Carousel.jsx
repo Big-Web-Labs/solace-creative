@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import crowd from '../assets/crowd.png'
 import graph from '../assets/graph.png'
+import ddg from '../assets/ddg.jpg'
+import elevatedgoods from '../assets/elevatedgoods.jpg'
 import rightArrow from '../assets/rightArrow.png'
 import { motion } from 'framer-motion'
 import { useSelector, useDispatch } from 'react-redux'
@@ -13,16 +15,16 @@ const Carousel = () => {
         {
             idx: 1,
             pos: 1,
-            title: 'Our Workforce Data 2022 - Q1',
-            image: crowd,
+            title: '9 Lives - DDG',
+            image: ddg,
             slug: 'read-more',
             active: true
         },
         {
             idx: 2,
             pos: 2,
-            title: 'Our Workforce Data 2022 - Q2',
-            image: graph,
+            title: 'Elevated Goods - ZOE LA',
+            image: elevatedgoods,
             slug: 'read-more',
             active: true
         },
@@ -61,17 +63,6 @@ const Carousel = () => {
     ])
 
     return (
-        // <motion.div layout className="py-16 flex flex-col sm:flex-row justify-between gap-10 text-[#F3F3F3] section overflow-hidden scroll-smooth z-0">
-        //     {data.filter((f) => f.active === true)
-        //     .sort((a, b) => (a.pos > b.pos ? 1 : b.pos > a.pos ? -1 : 0)) 
-        //     .map((item) => (
-        //         <motion.div key={item.title} animate={{opacity: 1}} initial={{opacity: 0}} exit={{opacity: 0}} layout className="flex-[0_0_48%]">
-        //             {!open && <img src={item.image} alt="crowd" />}
-        //             {!open && <p className="text-[1.25rem] sm:text-[2rem] font-light font-roboto mt-10">{item.title}</p>}
-        //             {!open && <p className="flex items-center gap-x-2 text-[0.875rem] font-medium font-roboto cursor-pointer">Read more <span><img src={rightArrow} /></span></p>}
-        //         </motion.div>
-        //     ))}
-        // </motion.div>
         <div className="section grid place-items-center">
             <div className="slider">
                 <div className="slide-track">

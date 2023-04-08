@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import {CreativeAgency, Home, ForTheLikeMinded, InternalProjects, Contact} from './pages'
+import {CreativeAgency, Home, ForTheLikeMinded, InternalProjects, Contact, Lock} from './pages'
 import './App.css'
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/">
-          <Route index element={<Home />} />
+          <Route index element={<Lock />} />
           <Route path="creative-agency" element={<CreativeAgency />} />
           <Route path="for-the-like-minded" element={<ForTheLikeMinded />} />
           <Route path="internal-projects" element={<InternalProjects />} />
