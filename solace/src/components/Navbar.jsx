@@ -31,7 +31,7 @@ const Navbar = () => {
                         {hover == 2 && <motion.p animate={{ opacity: [0, 1] }} className="text-[1rem] w-[170px] xl:w-[325px] text-[#F3F3F3]/80">Creatively, we have no focus - our focus resides in our purpose. Here's our ethos:</motion.p>}
                     </motion.li>
                     <motion.li initial={animateFrom} animate={animateTo} transition={{ delay: 0.30 }}>
-                        <a href="/internal-projects" onMouseEnter={() => setHover(3)} onMouseLeave={() => setHover(0)} className={hover == 3 ? "text-[#F3F3F3]/80" : ""}>INTERNAL PROJECTS</a>
+                        <a href="#" onMouseEnter={() => setHover(3)} onMouseLeave={() => setHover(0)} className={hover == 3 ? "text-[#F3F3F3]/80" : ""}>INTERNAL PROJECTS</a>
                         {hover == 3 && <motion.p animate={{ opacity: [0, 1] }} className="text-[1rem] w-[160px] xl:w-[310px] text-[#F3F3F3]/80">No parameters. All play. We believe strongly in stoking childlike curiosity with work that is purely for ourselves:</motion.p>}
                     </motion.li>
                     <motion.li initial={animateFrom} animate={animateTo} transition={{ delay: 0.40 }}>

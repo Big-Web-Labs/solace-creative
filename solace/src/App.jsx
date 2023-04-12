@@ -8,7 +8,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/">
-          <Route index element={<Lock />} />
+          <Route index element={<Home />} />
           <Route path="creative-agency" element={<CreativeAgency />} />
           <Route path="for-the-like-minded" element={<ForTheLikeMinded />} />
           <Route path="internal-projects" element={<InternalProjects />} />
