@@ -12,7 +12,7 @@ const Contact = () => {
             {open && <NavOverlay/>}
             <CreativeBanner logo={logo}/>
             <ContactForm />
-            <div className="flex flex-col items-center gap-y-5 pt-5 pb-16 text-xl">
+            <div className="flex flex-col items-center gap-y-5 pt-5 pb-16 text-2xl">
                 <p>937 E. Pico Blvd. Los Angeles, CA 90021</p>
                 <p>info@solacecreative.co</p>
             </div>

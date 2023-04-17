@@ -4,3 +4,4 @@ export { default as ForTheLikeMinded } from './ForTheLikeMinded';
 export { default as InternalProjects } from './InternalProjects';
 export { default as Contact } from './Contact';
 export { default as Lock } from './Lock';
+export { default as ProjectDetails } from './ProjectDetails';

@@ -4,7 +4,7 @@ html {
 
 .section {
   max-width: 1536px;
-  padding: 2rem;
+  padding: 2rem 4rem;
   margin: 0 auto;
   overflow: hidden;
 }

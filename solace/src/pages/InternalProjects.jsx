@@ -2,18 +2,9 @@ import React from 'react'
 import logo from '../assets/solace_blue.png'
 import {NavOverlay, CreativeBanner, CreativePortfolio, Footer} from '../components'
 import { useSelector, useDispatch } from 'react-redux'
-import ddg from '../assets/ddg.jpg'
-import mickeyCover from '../assets/mickey-cover.jpg'
-import aintmyfault from '../assets/aintmyfault.jpg'
-import elevatedgoods from '../assets/elevatedgoods.png'
-import haydCover from '../assets/hayd-cover.jpg'
-import holdingon from '../assets/holdingon.jpg'
-import jakepaul from '../assets/jakepaul.jpg'
-import kaicenat from '../assets/kaicenat.jpg'
-import acesCover from '../assets/aces-cover.jpg'
-import kidlaroi from '../assets/kidlaroi.jpg'
-import strickCover from '../assets/strick-cover.jpg'
-import vignettesCover from '../assets/vignettes-cover.jpg'
+import roseCover from '../assets/rose-cover.jpg'
+import whiteHat from '../assets/white-hat.png'
+import solaceStudio from '../assets/solace-studio-cover.jpg'
 
 const InternalProjects = () => {
 
@@ -21,64 +12,31 @@ const InternalProjects = () => {
 
     const projects = [
         {
-            title: "9 Lives - DDG",
-            image: ddg,
-            slug: ""
+            title: "\"MALIBU SOUVENIR HAT\"",
+            artist: "SOLACE",
+            image: whiteHat,
+            description: "Solace is, by definition, an immaterial “place”. It’s somewhere you arrive mentally, but isn’t necessarily dependent upon location. With that being said, Malibu has always been a place that we’ve found consistent refuge in. During peak pandemic, we would often drive the PCH and land along the oceanside - it’s been our consistent source of peace and calmness. We came up with a simple design, inspired by standard souvenir hats. It caught quick attention in our immediate circle and we’ve kept it as a friends & family staple.",
+            slug: "malibu-souvenir-hat",
+            link: "",
+            background: "#4571C8"
         },
         {
-            title: "Baby Tate - Saweetie Short-Form",
-            image: mickeyCover,
-            slug: ""
+            title: "\"FIRE TO FLOWER\"",
+            artist: "SOLACE",
+            image: roseCover,
+            description: "Our friend, Tayla, needed some new images. We like to compliment our subject when it comes to overall creative - the idea to light a rose on fire was really just a way to capture Tayla’s energy. It turns out, you actually can’t just light a rose with an open flame from a lighter or match. We audibled and used whatever we had laying around our office - the result was still pretty fire.",
+            slug: "fire-to-flower",
+            link: "",
+            background: "#F5D5BC"
         },
         {
-            title: "Babyface Ray - It Ain't My Fault",
-            image: aintmyfault,
-            slug: ""
-        },
-        {
-            title: "Elevated Goods - ZOE LA",
-            image: elevatedgoods,
-            slug: ""
-        },
-        {
-            title: "Hayd - Head in the Clouds",
-            image: haydCover,
-            slug: ""
-        },
-        {
-            title: "iann dior - Holding On",
-            image: holdingon,
-            slug: ""
-        },
-        {
-            title: "Jake Paul - 23",
-            image: jakepaul,
-            slug: ""
-        },
-        {
-            title: "Kai Cenat MAFIATHON",
-            image: kaicenat,
-            slug: ""
-        },
-        {
-            title: "Micro-visualizers - The Aces",
-            image: acesCover,
-            slug: ""
-        },
-        {
-            title: "Spotify - The Kid LAROI",
-            image: kidlaroi,
-            slug: ""
-        },
-        {
-            title: "Strick - Nelly Furtado",
-            image: strickCover,
-            slug: ""
-        },
-        {
-            title: "The Aces Vignettes",
-            image: vignettesCover,
-            slug: ""
+            title: "\"SOLACE STUDIO\"",
+            artist: "SOLACE",
+            image: solaceStudio,
+            description: "Admittedly, we aren’t the best at consistently documenting our projects and work - it comes and goes in waves. This is our ongoing attempt to capture moments that matter... the stuff behind the scenes. We’ve always found a lot of value to doing this, we’re holding ourselves accountable.",
+            slug: "solace-studio",
+            link: "",
+            background: "#181818"
         },
     ]
 

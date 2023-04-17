@@ -7,3 +7,5 @@ export { default as CreativeBanner } from './CreativeBanner';
 export { default as NavOverlay } from './NavOverlay';
 export { default as CreativePortfolio } from './CreativePortfolio';
 export { default as ContactForm } from './ContactForm';
+export { default as Details } from './Details';
+export { default as Ethos } from './Ethos';
