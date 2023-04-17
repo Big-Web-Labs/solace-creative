@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import white from '../assets/solace_white.png'
+import blue from '../assets/solace_blue.png'
 import { useParams } from 'react-router-dom'
-import { Details } from '../components'
+import { useSelector, useDispatch } from 'react-redux'
+import { Details, NavOverlay, Footer, CreativeBanner } from '../components'
 import ddg from '../assets/ddg.jpg'
 import mickeyCover from '../assets/mickey-cover.jpg'
 import aintmyfault from '../assets/aintmyfault.jpg'
@@ -20,6 +23,7 @@ import solaceStudio from '../assets/solace-studio-cover.jpg'
 const ProjectDetails = () => {
 
     const { slug } = useParams()
+    const { open } = useSelector((state) => state.menu)
 
     const projects = [
         {
@@ -159,9 +163,24 @@ const ProjectDetails = () => {
         },
     ]
 
+    const [bgColor, setBgColor] = useState(null)
+    let logo
+
+    useEffect(() => {
+        setBgColor(projects.filter((item) => item.slug == slug)[0].background)
+        
+    }, [])
+    console.log("hello")
+    console.log("1" < "2")
+    console.log("#3" < "#4")
+
     return (
-        <div>
+        <div style={{ backgroundColor: bgColor }}>
+            {open && <NavOverlay />}
+            {bgColor < "#7F7F7F" && <CreativeBanner logo={white} />}
+            {bgColor >= "#7F7F7F" && <CreativeBanner logo={blue} />}
             <Details projects={projects.filter((item) => item.slug == slug)} />
+            <Footer />
         </div>
     )
 }

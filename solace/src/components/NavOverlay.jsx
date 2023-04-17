@@ -13,7 +13,7 @@ const NavOverlay = () => {
     const [hover, setHover] = useState(0)
 
     return (
-        <motion.div animate={{ opacity: [0, 1] }} className="z-10 h-[100vh] max-h-[1000px] fixed w-screen bg-[#2323F2] text-[#F3F3F3] text-[1.5rem] md:text-[1rem] lg:text-[1.25rem] xl:text-[2rem]">
+        <motion.div animate={{ opacity: [0, 1] }} className="z-10 h-[100vh] max-h-[1000px] fixed w-screen bg-[#2323F2] text-[#F3F3F3] text-[1.25rem] md:text-[1rem] lg:text-[1.25rem] xl:text-[2rem]">
                 <motion.ul className="section relative flex flex-col md:flex-row items-center md:items-start justify-center gap-y-5 md:justify-between md:pr-24 h-full">
                     <motion.li initial={animateFrom} animate={animateTo} transition={{ delay: 0.10 }} >
                         <a href="/creative-agency" onMouseEnter={() => setHover(1)} onMouseLeave={() => setHover(0)} className={hover == 1 ? "text-[#F3F3F3]/80" : ""}>CREATIVE AGENCY</a>

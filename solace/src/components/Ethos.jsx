@@ -44,7 +44,7 @@ const Accordion = ({ i, expanded, setExpanded }) => {
                     className="flex gap-x-2 items-center cursor-pointer"
                 >
                     <GoPrimitiveDot />
-                    <h3 className="text-3xl">{i.name}</h3>
+                    <h3 className="text-xl sm:text-3xl">{i.name}</h3>
                     <motion.button initial={false} animate={{rotate: isOpen? -90 : 0}}><AiOutlineLeft /></motion.button>
                 </motion.div>
 
