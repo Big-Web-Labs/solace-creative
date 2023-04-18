@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import menu from '../assets/menu.png'
 import { useSelector, useDispatch } from 'react-redux'
 import { turnOn, turnOff } from '../redux/menuState'
+import { setBgColor} from '../redux/bgState'
 import { AiOutlineClose } from 'react-icons/ai'
 import menu_black from '../assets/menu_black.png'
 import { useLocation } from 'react-router-dom'
@@ -10,6 +11,7 @@ import { motion } from 'framer-motion'
 const Navbar = () => {
 
     const { open } = useSelector((state) => state.menu)
+    const { bgColor } = useSelector((state) => state.bg)
     const dispatch = useDispatch()
     const location = useLocation();
 
@@ -18,11 +20,9 @@ const Navbar = () => {
 
     const [hover, setHover] = useState(0)
 
-    console.log(location.pathname)
-
     return (
         <div className="relative z-20">
-            {location.pathname == "/" &&
+            {location.pathname == "/" && !open &&
                 <motion.ul className="absolute hidden md:flex md:flex-row items-center md:items-start justify-center gap-y-5 md:justify-between h-screen w-full text-[#F3F3F3] text-[1.5rem] md:text-[1rem] lg:text-[1.25rem] lg:px-20">
                     <motion.li initial={animateFrom} animate={animateTo} transition={{ delay: 0.10 }}>
                         <a href="/creative-agency" onMouseEnter={() => setHover(1)} onMouseLeave={() => setHover(0)} className={hover == 1 ? "text-[#F3F3F3]/80" : ""}>CREATIVE AGENCY</a>
@@ -44,7 +44,11 @@ const Navbar = () => {
             }
             <div className="absolute right-0 flex items-center gap-x-10 z-10">
                 {!open && (location.pathname == "/" || location.pathname == "/for-the-like-minded" || location.pathname == "/contact") && <img src={menu} alt="menu" className={location.pathname == "/" ? "block md:hidden cursor-pointer" : "cursor-pointer"} onClick={() => dispatch(turnOn())} />}
-                {!open && (location.pathname == "/creative-agency" || location.pathname == "/internal-projects" || location.pathname.includes("/projects")) && <img src={menu_black} alt="menu" className="cursor-pointer" onClick={() => dispatch(turnOn())} />}
+                {!open && (location.pathname == "/creative-agency" || location.pathname == "/internal-projects") && <img src={menu_black} alt="menu" className="cursor-pointer" onClick={() => dispatch(turnOn())} />}
+            </div>
+            <div className="absolute right-0 flex items-center gap-x-10 z-10">
+                {!open && bgColor < "#7F7F7F" && location.pathname.includes("/projects") && <img src={menu} alt="menu" className={location.pathname == "/" ? "block md:hidden cursor-pointer" : "cursor-pointer"} onClick={() => dispatch(turnOn())} />}
+                {!open && bgColor >= "#7F7F7F" && location.pathname.includes("/projects") && <img src={menu_black} alt="menu" className="cursor-pointer" onClick={() => dispatch(turnOn())} />}
             </div>
             <div className="fixed right-8 flex items-center gap-x-10 z-10">
                 {open && <AiOutlineClose className="cursor-pointer text-[#F3F3F3]/80" size={30} onClick={() => dispatch(turnOff())} />}

@@ -114,7 +114,7 @@ const CreativeAgency = () => {
             title: "\"NELLY FURTADO\" MUSIC VIDEO PRODUCTION",
             artist: "STRICK",
             image: strickCover,
-            description: "",
+            description: "Solace produced the “Nelly Furtado” music video with Strick. The video was shot in Los Angeles, CA.",
             slug: "nelly-furtado",
             link: "https://www.youtube.com/watch?v=xjvxO9FZnfE",
             background: "#141C25"

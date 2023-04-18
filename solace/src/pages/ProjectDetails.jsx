@@ -3,6 +3,7 @@ import white from '../assets/solace_white.png'
 import blue from '../assets/solace_blue.png'
 import { useParams } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
+import { setBgColor} from '../redux/bgState'
 import { Details, NavOverlay, Footer, CreativeBanner } from '../components'
 import ddg from '../assets/ddg.jpg'
 import mickeyCover from '../assets/mickey-cover.jpg'
@@ -24,6 +25,9 @@ const ProjectDetails = () => {
 
     const { slug } = useParams()
     const { open } = useSelector((state) => state.menu)
+
+    const { bgColor } = useSelector((state) => state.bg)
+    const dispatch = useDispatch()
 
     const projects = [
         {
@@ -120,7 +124,7 @@ const ProjectDetails = () => {
             title: "\"NELLY FURTADO\" MUSIC VIDEO PRODUCTION",
             artist: "STRICK",
             image: strickCover,
-            description: "",
+            description: "Solace produced the “Nelly Furtado” music video with Strick. The video was shot in Los Angeles, CA.",
             slug: "nelly-furtado",
             link: "https://www.youtube.com/watch?v=xjvxO9FZnfE",
             background: "#141C25"
@@ -163,16 +167,11 @@ const ProjectDetails = () => {
         },
     ]
 
-    const [bgColor, setBgColor] = useState(null)
-    let logo
+    // const [bgColor, setBgColor] = useState(null)
 
     useEffect(() => {
-        setBgColor(projects.filter((item) => item.slug == slug)[0].background)
-        
+        dispatch(setBgColor(projects.filter((item) => item.slug == slug)[0].background))
     }, [])
-    console.log("hello")
-    console.log("1" < "2")
-    console.log("#3" < "#4")
 
     return (
         <div style={{ backgroundColor: bgColor }}>
