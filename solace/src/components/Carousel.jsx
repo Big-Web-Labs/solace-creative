@@ -211,18 +211,18 @@ const Carousel = () => {
             <div className="slider">
                 <div className="slide-track">
                     {data.map((item, index) => (
-                        <div className="slide text-[#F3F3F3] cursor-pointer" key={index}>
+                        <a href={`/projects/${item.slug}`} className="slide text-[#F3F3F3] cursor-pointer" key={index}>
                             <img src={item.image} className="h-[100px] sm:h-[275px]" />
                             <p className="text-[1.125rem] sm:text-[2rem] font-light font-roboto mt-5 sm:mt-10">{item.title}</p>
                             <p className="flex items-center gap-x-2 text-[0.875rem] font-medium font-roboto cursor-pointer">Read more <span><img src={rightArrow} /></span></p>
-                        </div>
+                        </a>
                     ))}
                     {data.map((item, index) => (
-                        <div className="slide text-[#F3F3F3] cursor-pointer" key={index}>
+                        <a href={`/projects/${item.slug}`} className="slide text-[#F3F3F3] cursor-pointer" key={index}>
                             <img src={item.image} className="h-[100px] sm:h-[275px]" />
                             <p className="text-[1.125rem] sm:text-[2rem] font-light font-roboto mt-5 sm:mt-10">{item.title}</p>
                             <p className="flex items-center gap-x-2 text-[0.875rem] font-medium font-roboto cursor-pointer">Read more <span><img src={rightArrow} /></span></p>
-                        </div>
+                        </a>
                     ))}
                 </div>
             </div>
