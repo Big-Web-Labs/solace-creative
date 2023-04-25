@@ -23,7 +23,8 @@ const Details = ({ projects}) => {
                     <img src={project.image} alt={project.title} className="mb-5 w-full" />
                     <h1 className="text-[1.125rem] sm:text-[1.75rem]">{project.title}</h1>
                     <h2 className="ml-8 font-light">{project.artist}</h2>
-                    <p className="mt-10">{project.description}</p>
+                    <p className="mt-10 text-center text-[1rem] sm:text-[1.75rem]">{project.description}</p>
+                    {/* <iframe src={project.link} className="w-full h-[50vh] my-10" /> */}
                 </div>
             ))}
         </div>

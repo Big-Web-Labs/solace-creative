@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import logo from '../assets/solace_spinning.mp4'
+import newLogo from '../assets/newLogo.mp4'
 import logo_spinning from '../assets/logo_spinning.mp4'
 import { Navbar } from './'
 import '../App.css'

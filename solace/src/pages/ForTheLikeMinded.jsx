@@ -16,7 +16,7 @@ const ForTheLikeMinded = () => {
       <div className="section flex flex-col items-center gap-8">
         <p className="place-self-start text-xl sm:text-3xl">By definition SOLACE means "comfort or consolation in a time of distress."</p>
         <p className="place-self-start text-xl sm:text-3xl">As a creative agency, our scope of work remains unfocused. Our clientele and services range free of any 'boxes'; however, our purpose is very much focused. Our operation is anchored by three pillars:</p>
-        <Ethos/>
+        <div className="sm:my-10 flex flex-col gap-y-8"><Ethos/></div>
       </div>
       <Footer />
     </div>
